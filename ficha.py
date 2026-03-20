@@ -8,7 +8,7 @@ def ficha():
     partes = nombre_completo.split()
     iniciales = partes[0][0] + partes[1][0]
 
-    usuario = partes[0].lower() + "." + partes[1].lower()
+    usuario = partes[1].lower() + "." + partes[0].lower()
 
     email_valido = "@" in email
     
@@ -39,7 +39,7 @@ def ficha():
     print(f"Caracteres en nombre: {caracteres}")
     print(f"Iniciales: {iniciales}")
     print(f"Usuario: {usuario}")
-    print(f"Email válido: {email_valido}")
+    print(f"Email valido: {email_valido}")
     print(f"Dominio: {dominio}")
     print(f"Nombre para archivo: {nombre_archivo}")
     print(f"Cantidad de a: {cantidad_a}")
