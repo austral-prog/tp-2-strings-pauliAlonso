@@ -43,7 +43,7 @@ def ficha():
     print(f"Dominio: {dominio}")
     print(f"Nombre para archivo: {nombre_archivo}")
     print(f"Cantidad de a: {cantidad_a}")
-    print(f"Código secreto: {nombre_invertido}")
+    print(f"Codigo secreto: {nombre_invertido}")
     print(f"Nota 1: {nota1}")
     print(f"Nota 2: {nota2}")
     print(f"Nota 3: {nota3}")
