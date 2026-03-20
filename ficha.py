@@ -1,20 +1,21 @@
 def ficha():
- 
     nombre_completo = input("Ingrese su nombre completo: ").strip().title()
   
-    email = input("Ingrese su email: ")
-    email = email.lower() 
+    email = input("Ingrese su email: ").lower()
 
     caracteres = len(nombre_completo) 
 
-    espacio = nombre_completo.find(" ")
-    iniciales = nombre_completo[0] + nombre_completo[espacio + 1]
+    partes = nombre_completo.split()
+    iniciales = partes[0][0] + partes[1][0]
 
-    usuario = nombre_completo.lower()[espacio+1:] + "." + nombre_completo.lower()[:espacio]
+    usuario = partes[0].lower() + "." + partes[1].lower()
 
     email_valido = "@" in email
-    arroba = email.find("@")
-    dominio = email[arroba+1:] 
+    
+    if email_valido:
+        dominio = email[email.find("@")+1:]
+    else:
+        dominio = ""
 
     nombre_archivo = nombre_completo.replace(" ","_")
 
@@ -30,7 +31,6 @@ def ficha():
     promedio = suma / 3
     promedio_entero = suma // 3
 
-
     print("========================") 
     print("    FICHA DEL ALUMNO")
     print("========================") 
@@ -39,11 +39,11 @@ def ficha():
     print(f"Caracteres en nombre: {caracteres}")
     print(f"Iniciales: {iniciales}")
     print(f"Usuario: {usuario}")
-    print(f"Email valido: {email_valido}")
+    print(f"Email válido: {email_valido}")
     print(f"Dominio: {dominio}")
     print(f"Nombre para archivo: {nombre_archivo}")
     print(f"Cantidad de a: {cantidad_a}")
-    print(f"Codigo secreto: {nombre_invertido}")
+    print(f"Código secreto: {nombre_invertido}")
     print(f"Nota 1: {nota1}")
     print(f"Nota 2: {nota2}")
     print(f"Nota 3: {nota3}")
