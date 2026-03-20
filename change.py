@@ -14,7 +14,7 @@ def change():
     vuelto = dinero - gasto
 
     pesos = int(vuelto)
-    centavos = int((vuelto - pesos) * 100)
+    centavos = int(round((vuelto - pesos) * 100))
 
     print("Pesos:")
     print(pesos)
